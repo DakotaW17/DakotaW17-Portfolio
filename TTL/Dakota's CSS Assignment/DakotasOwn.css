@@ -1,0 +1,59 @@
+/* spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: spin 1s linear infinite;
+}
+
+/* bounce anim */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30vw);
+  }
+}
+
+.ball {
+  animation: bounce 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+/* ease anim */
+@keyframes slideIn { 
+0% { 
+transform: translateX(0vw); /* Start off-screen to the right */ 
+opacity: 0; 
+} 
+100% { 
+transform: translateX(100vw); /* End at its original position */ 
+opacity: 1; 
+} 
+} 
+.segway { 
+height: 100px; 
+width: 100px; 
+position: absolute; /* Allows precise control over movement */ 
+width: 100px; /* Example width */ 
+height: auto; 
+animation-name: slideIn; /* Name of the @keyframes rule */ 
+animation-duration: 5s; /* Duration of the animation */ 
+animation-iteration-count: infinite; /* Makes the animation repeat forever */ 
+animation-timing-function: ease-in; /* Controls speed curve */ 
+}
